@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Verification</title>
+  <link rel="stylesheet" href="passkey.css">
+</head>
+<body>
+
+  <h2>Enter Password to Continue</h2>
+
+  <!-- Input untuk memasukkan password -->
+  <input type="text" id="password" placeholder="Enter password">
+  <button onclick="verifyPassword()">Verify Password</button>
+
+  <script>
+    // Password yang benar
+    const correctPassword = "123456"; // Ganti dengan password yang diinginkan
+
+    function verifyPassword() {
+      // Ambil input password dari pengguna
+      const enteredPassword = document.getElementById('password').value;
+
+      // Cek apakah password yang dimasukkan benar
+      if (enteredPassword === correctPassword) {
+        // Jika benar, redirect ke halaman lain
+        window.location.href = 'bunga.html';
+      } else {
+        // Jika salah, munculkan alert
+        alert('Incorrect password. Please try again.');
+      }
+    }
+  </script>
+
+</body>
+</html>
